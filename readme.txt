@@ -1,14 +1,14 @@
 === PHP Everywhere ===
-Contributors: alexander_fuchs
-Tags: PHP,HTML,code
-Donate link: http://www.alexander-fuchs.net/donate/
+Contributors: alexander_fuchs 
+Donate link:http://www.alexander-fuchs.net/donate/
+Tags: code,html,php,post,page,widget
 Requires at least: 3.0
 Tested up to: 4.0
 Stable tag: trunk
 License: GPL2
 License URI: http://www.gnu.de/documents/gpl-2.0.de.html
 
-This plugin enables PHP code everywhere in your Wordpress instalation.
+This plugin enables PHP code everywhere in your WordPress instalation.
 
 Using this plugin you can use PHP in:
 -Widgets
@@ -16,16 +16,38 @@ Using this plugin you can use PHP in:
 -Posts
 
 == Description ==
-This plugin enables PHP code everywhere in your Wordpress instalation.
 
-Using this plugin you can use PHP in:
--Widgets
--Pages
--Posts
+<p style="margin: 0px 0px 22px; padding: 0px; clear: left; font-size: 13px; color: #444444; font-family: sans-serif; line-height: 22px;">
+  This plugin enables PHP code everywhere in your WordPress instalation.
+</p>
+
+<p style="margin: 0px 0px 22px; padding: 0px; clear: left; font-size: 13px; color: #444444; font-family: sans-serif; line-height: 22px;">
+  Using this plugin you can use PHP in:
+</p>
+
+<p style="margin: 0px 0px 22px; padding: 0px; clear: left; font-size: 13px; color: #444444; font-family: sans-serif; line-height: 22px;">
+  <ul>
+    <li>
+      Widgets
+    </li>
+    <li>
+      Pages
+    </li>
+    <li>
+      Posts
+    </li>
+  </ul>
+</p>
 
 == Installation ==
-Install the plugin and visit the options page to see a short usage guide.
 
+Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page. There is a usage guide on the plugins options page.
+== Frequently Asked Questions ==
+
+**Q: How do I use this plugin?**
+
+A: You can find a usage guide on the options page
 == Changelog ==
 1.0:
-- Initial release
+
+*   release
