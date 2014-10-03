@@ -10,10 +10,7 @@ License URI: http://www.gnu.de/documents/gpl-2.0.de.html
 
 This plugin enables PHP code everywhere in your WordPress instalation.
 
-Using this plugin you can use PHP in:
--Widgets
--Pages
--Posts
+Using this plugin you can use PHP in widgets, pages and posts
 
 == Description ==
 
@@ -47,6 +44,11 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 **Q: How do I use this plugin?**
 
 A: You can find a usage guide on the options page
+
+== Screenshots ==
+
+1. This is the plugins post and pages option. Paste your PHP or HTML into this option and place the shortcode where you want the plugin to appear.
+
 == Changelog ==
 1.0:
 
