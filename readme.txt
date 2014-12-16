@@ -3,7 +3,7 @@ Contributors: alexander_fuchs
 Donate link:http://www.alexander-fuchs.net/donate/
 Tags: code,html,php,post,page,widget
 Requires at least: 3.0
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: trunk
 License: GPL2
 License URI: http://www.gnu.de/documents/gpl-2.0.de.html
