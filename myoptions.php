@@ -9,17 +9,43 @@ function php_everywhere_options() {
 	if ( !current_user_can( 'manage_options' ) )  {
 		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
 	}
+	
+	if(isset($_POST['php_everywhere_roles']))
+	{
+	update_option('php_everywhere_option_roles',$_POST['php_everywhere_roles']);
+	}
+
 	?>
 <div class="wrap">
 <h1>PHP Everywhere</h1>
 <p>Thanks for using PHP Everywhere. If you have any questions, feel free to ask <a href="mailto:alexandria96gmx.de">me</a>.<br />I created this plugin because I have not found a Wordpress PHP plugin which is simple to use and provides a good user experience while being able to use PHP or HTML in Posts, Pages or Widgets.</p>
+<h1>User role management</h1>
+<p>Who can modify the PHP in posts and pages?</p>
+<form method="post">
+<select name="php_everywhere_roles">
+  <option value="everyone">Administrator, editor, author</option>
+  <option value="admin" <?php if(get_option('php_everywhere_option_roles')=='admin'){echo('selected');}?>>Administrator only</option>
+</select>
+<?php submit_button(); ?>
+</form> 
 <h1>Usage</h1>
 <h3>Widgets</h3>
 <p>Simply activate the <pre>PHP + HTML</pre> Widget. in your sidebar and paste your PHP code including the PHP Tags like this:
-<pre>&lt;?php  Echo \"Hello, World!\"; ?&gt;</pre>
+<pre>&lt;?php  echo("Hello, World!"); ?&gt;</pre>
 You code may contain HTML Elements or have multiple lines.</p>
 <h3>Posts & Pages</h3>
 <p>Edit or create a new post or page and simply put your PHP Code including the PHP Tags into the side options_box, which is labeled "PHP Everywhere". Then put the<pre>[php_everywhere]</pre> shortcode where you want the code to appear. Your code may contain multiple lines or HTML Tags.</p>
+<h3>Multiple PHP instances</h3>
+<p>If you want to use multiple PHP instances use the shortcode with the instance parameter like this:<br><pre>[php_everywhere instance="1"]</pre><br>Your PHP snippet should look like this:<br><pre>&lt;?php
+if($instance==&quot;1&quot;)
+{
+echo(&quot;Number one!&quot;);
+}
+if($instance==&quot;2&quot;)
+{
+echo(&quot;Number two!&quot;);
+}
+?&gt;</pre></p>
 <h1>Changelog</h1>
 <p>Go to <a href="http://www.alexander-fuchs.net/php-everywhere/" target="_blank">http://www.alexander-fuchs.net/php-everywhere/</a> to view the changelog and more informations.</p>
 <h1>Like this Plugin? Support me :)</h1>

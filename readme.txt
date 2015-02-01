@@ -35,6 +35,9 @@ Using this plugin you can use PHP in widgets, pages and posts
     </li>
   </ul>
 </p>
+<p style="margin: 0px 0px 22px; padding: 0px; clear: left; font-size: 13px; color: #444444; font-family: sans-serif; line-height: 22px;">
+  The plugin also supports different user restrictions and multiple PHP instances.
+</p>
 
 == Installation ==
 
@@ -45,11 +48,20 @@ Extract the zip file and just drop the contents in the wp-content/plugins/ direc
 
 A: You can find a usage guide on the options page
 
+**Q: Does this Plugin support multiple PHP instances?**
+
+A: Yes, but you need to check for a position parameter usinf if statements in your PHP snippet. 
+
 == Screenshots ==
 
 1. This is the plugins post and pages option. Paste your PHP or HTML into this option and place the shortcode where you want the plugin to appear.
+2. This is the plugins multiple PHP instance functionality
 
 == Changelog ==
 1.0:
 
 *   release
+
+1.1:
+
+*   added multiple PHP instances

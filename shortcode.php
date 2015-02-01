@@ -1,6 +1,11 @@
 <?php
 //[php_everywhere]
 function php_everywhere_func( $atts,$content = null  ){
+	$param = shortcode_atts( array(
+        'instance' => "",
+    ), $atts );
+	$instance = "";
+	$instance = $param['instance'];
 	$content = htmlspecialchars_decode($content);
 	$content = str_replace("&#8216;","'",$content);
 	$content = str_replace("&#8217;","'",$content);

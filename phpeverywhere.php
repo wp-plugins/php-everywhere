@@ -3,7 +3,7 @@
 * Plugin Name: PHP Everywhere
 * Plugin URI: http://www.alexander-fuchs.net/php-everywhere/
 * Description: This Plugin enables PHP code in widgets, pages and posts
-* Version: 1.0
+* Version: 1.1
 * Author: Alexander Fuchs
 * Author URI: http://www.alexander-fuchs.net
 * License: GPL2
@@ -23,8 +23,15 @@ add_action( 'widgets_init', create_function('', 'return register_widget("phpever
 add_shortcode( 'php_everywhere', 'php_everywhere_func' );
 add_action( 'admin_menu', 'php_everywhere_menu' );
 // register the meta box
-add_action( 'add_meta_boxes', 'php_everywhere_options_box' );
+    add_action( 'add_meta_boxes', 'php_everywhere_options_box' );
 function php_everywhere_options_box() {
+if(get_option('php_everywhere_option_roles')=='admin')
+{
+//get user
+$user = wp_get_current_user();
+//check user role
+echo("<p>".$user->roles[0]."</p>");
+if($user->roles[0] == 'administrator') {
     add_meta_box(
         'php_everywhere_options_id',          // this is HTML id of the box on edit screen
         'PHP Everywhere',    // title of the box
@@ -33,6 +40,20 @@ function php_everywhere_options_box() {
         'side',      // part of page where the box should appear
         'default'      // priority of the box
     );
+}
+}
+else
+{
+add_meta_box(
+        'php_everywhere_options_id',          // this is HTML id of the box on edit screen
+        'PHP Everywhere',    // title of the box
+        'php_everywhere_options_box_content',   // function to be called to display the checkboxes, see the function below
+        '',        // on which edit screen the box should appear
+        'side',      // part of page where the box should appear
+        'default'      // priority of the box
+    );
+}
+    
 }
 
 ?>
