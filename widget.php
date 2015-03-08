@@ -13,9 +13,9 @@ class phpeverywherewidget extends WP_Widget
     $title = $instance['title'];
     $content = $instance['content'];
 ?>
-  <p><label for="<?php echo $this->get_field_id('title'); ?>">Title: <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo attribute_escape($title); ?>" /></label>
+  <p><label for="<?php echo $this->get_field_id('title'); ?>">Title: <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></label>
 
-<label for="<?php echo $this->get_field_id('content'); ?>">Content: <textarea class="widefat" id="<?php echo $this->get_field_id('content'); ?>" name="<?php echo $this->get_field_name('content'); ?>" rows="10"><?php echo attribute_escape($content); ?></textarea></label></p>
+<label for="<?php echo $this->get_field_id('content'); ?>">Content: <textarea class="widefat" id="<?php echo $this->get_field_id('content'); ?>" name="<?php echo $this->get_field_name('content'); ?>" rows="10"><?php echo esc_attr($content); ?></textarea></label></p>
 <?php
   }
  
