@@ -23,6 +23,10 @@ function php_everywhere_data() {
     // check if this isn't an auto save
     if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
         return;
+		
+	 if (!isset($_POST['php_everywhere']) ) {
+		$_POST['php_everywhere'] = false;
+    }
 
     // security check
     if ( !wp_verify_nonce( $_POST['php_everywhere'], plugin_basename( __FILE__ ) ) )

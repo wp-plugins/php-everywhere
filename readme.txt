@@ -65,3 +65,6 @@ A: Yes, but you need to check for a position parameter usinf if statements in yo
 1.1:
 
 *   added multiple PHP instances
+1.1.2:
+
+*   fixed some minor bugs when creating a menu
