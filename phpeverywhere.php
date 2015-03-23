@@ -3,7 +3,7 @@
 * Plugin Name: PHP Everywhere
 * Plugin URI: http://www.alexander-fuchs.net/php-everywhere/
 * Description: This Plugin enables PHP code in widgets, pages and posts
-* Version: 1.1.2
+* Version: 1.2
 * Author: Alexander Fuchs
 * Author URI: http://www.alexander-fuchs.net
 * License: GPL2
@@ -19,6 +19,9 @@ require 'shortcode.php';
 require 'myoptions.php';
 require 'options_box.php';
 
+
+//init
+add_action( 'plugins_loaded', 'init_textdomain' );
 add_action( 'widgets_init', create_function('', 'return register_widget("phpeverywherewidget");') );
 add_shortcode( 'php_everywhere', 'php_everywhere_func' );
 add_action( 'admin_menu', 'php_everywhere_menu' );
@@ -54,6 +57,12 @@ add_meta_box(
     );
 }
     
+}
+function init_textdomain()
+{
+//Localization
+$loaded = load_plugin_textdomain('phpeverywhere', false, plugin_dir_path( __FILE__ )  . 'languages/' );
+
 }
 
 ?>
