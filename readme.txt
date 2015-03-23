@@ -76,4 +76,5 @@ A: Yes, but you need to check for a position parameter usinf if statements in yo
 
 == Other Notes ==
 **Translation**
-English and German : [http://www.alexander-fuchs.net](Alexander Fuchs)
+
+English and German : Alexander Fuchs (http://www.alexander-fuchs.net)
