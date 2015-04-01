@@ -73,8 +73,10 @@ A: Yes, but you need to check for a position parameter usinf if statements in yo
 1.2:
 
 *	added a german translation
+*	added a serbian translation
 
 == Other Notes ==
 **Translation**
 
 English and German : Alexander Fuchs (http://www.alexander-fuchs.net)
+Serbian : Borisa Djuraskovic (http://www.webhostinghub.com)
