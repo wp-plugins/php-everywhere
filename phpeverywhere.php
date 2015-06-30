@@ -33,7 +33,7 @@ if(get_option('php_everywhere_option_roles')=='admin')
 //get user
 $user = wp_get_current_user();
 //check user role
-echo("<p>".$user->roles[0]."</p>");
+//echo("<p>".$user->roles[0]."</p>");
 if($user->roles[0] == 'administrator') {
     add_meta_box(
         'php_everywhere_options_id',          // this is HTML id of the box on edit screen
